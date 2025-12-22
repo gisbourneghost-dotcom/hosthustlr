@@ -174,7 +174,7 @@ document.getElementById("Conbtn").addEventListener("click", async () => {
     };
 
     try {
-        const res = await fetch("https://YOUR-BACKEND-URL/api/checkout", {
+        const res = await fetch("https://hosthustlr.onrender.com/checkout", {
             method: "POST",
             headers: { "Content-Type": "application/json" },
             body: JSON.stringify(checkoutData)
@@ -198,3 +198,4 @@ document.getElementById("Conbtn").addEventListener("click", async () => {
 </script>
     </body>
         </html>
+
