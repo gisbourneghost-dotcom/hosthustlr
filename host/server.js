@@ -131,7 +131,7 @@ app.get("/api/products/:id", async (req, res) => {
 });
 
 // ---------------- SIGNUP ----------------
-app.post("/api/signup", async (req, res) => {
+app.post("/api/index", async (req, res) => {
   try {
     const { email, password, ConfirmPassword } = req.body;
 
@@ -350,4 +350,5 @@ app.post("/api/checkout", async (req, res) => {
 });
 
 // --- Start
+
 app.listen(PORT, () => console.log(`Server listening on http://localhost:${PORT}`));
