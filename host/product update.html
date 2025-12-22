@@ -149,7 +149,7 @@
         // LOAD PRODUCTS
         async function loadProducts() {
             try {
-                const res = await fetch("http://localhost:4000/api/products");
+                const res = await fetch("https://hosthustlr.onrender.com/products");
                 products = await res.json();
                 renderProducts();
             } catch (err) {
@@ -250,4 +250,5 @@
     </script>
 
 </body>
+
 </html>
