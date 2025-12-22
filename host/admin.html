@@ -299,7 +299,7 @@ document.addEventListener("DOMContentLoaded", () => {
     async function loadProducts() {
         productList.innerHTML = "Loading...";
 
-        const res = await fetch("http://localhost:4000/api/products");
+        const res = await fetch("https://hosthustlr.onrender.com/products");
         const products = await res.json();
 
         productList.innerHTML = "";
@@ -345,11 +345,11 @@ document.addEventListener("DOMContentLoaded", () => {
             formData.append("imageUrl", currentImageUrl);
         }
 
-        let url = "http://localhost:4000/api/products";
+        let url = "https://hosthustlr.onrender.com/products";
         let method = "POST";
 
         if (editingProductId) {
-            url = `http://localhost:4000/api/products/${editingProductId}`;
+            url = `https://hosthustlr.onrender.com/products/${editingProductId}`;
             method = "PUT";
         }
 
@@ -373,7 +373,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // ---------------------- EDIT PRODUCT ----------------------
     window.editProduct = async (id) => {
-        const res = await fetch(`http://localhost:4000/api/products/${id}`);
+        const res = await fetch(`https://hosthustlr.onrender.com/products/${id}`);
         const p = await res.json();
 
         editingProductId = id;
@@ -393,7 +393,7 @@ document.addEventListener("DOMContentLoaded", () => {
     window.deleteProduct = async (id) => {
         if (!confirm("Delete this?")) return;
 
-        const res = await fetch(`http://localhost:4000/api/products/${id}`, {
+        const res = await fetch(`https://hosthustlr.onrender.com/products/${id}`, {
             method: "DELETE",
             headers: { "x-admin-token": ADMIN_TOKEN }
         });
@@ -421,4 +421,5 @@ document.getElementById("Go").addEventListener("click", function() {
 });
 </script>
 </body>
+
 </html>
