@@ -114,7 +114,7 @@
     </div>
 
     <script>
-        const BACKEND_URL = "http://localhost:4000/api/signin"; 
+        const BACKEND_URL = "https://hosthustlr.onrender.com/signin"; 
         // Example: http://localhost:5000  OR  https://myapp.onrender.com
 
         document.getElementById("signin-form").addEventListener("submit", async function(e) {
@@ -134,7 +134,7 @@
             button.textContent = "Inachakata...";
 
             try {
-                const res = await fetch("http://localhost:4000/api/signin", {
+                const res = await fetch("https://hosthustlr.onrender.com/signin", {
                     method: "POST",
                     headers: { "Content-Type": "application/json" },
                     body: JSON.stringify({ 
@@ -171,4 +171,5 @@
         });
     </script>
 </body>
+
 </html>
